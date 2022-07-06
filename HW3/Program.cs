@@ -15,22 +15,36 @@
 
 
 
-// Задача 21
+// // Задача 21
 
-Console.Write("Введите х координату точки А: ");
-int xa = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите y координату точки А: ");
-int ya = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите z координату точки А: ");
-int za = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите х координату точки А: ");
+// int xa = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите y координату точки А: ");
+// int ya = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите z координату точки А: ");
+// int za = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Введите х координату точки B: ");
-int xb = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите y координату точки B: ");
-int yb = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите z координату точки B: ");
-int zb = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите х координату точки B: ");
+// int xb = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите y координату точки B: ");
+// int yb = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите z координату точки B: ");
+// int zb = Convert.ToInt32(Console.ReadLine());
 
-Console.Write($"A({xa}, {ya}, {za}), B({xb}, {yb}, {zb}) -> ");
-double S = Math.Sqrt((xb - xa) * (xb - xa) + (yb - ya) * (yb - ya) + (zb - za) * (zb - za));
-Console.WriteLine(Math.Round(S, 2));
+// Console.Write($"A({xa}, {ya}, {za}), B({xb}, {yb}, {zb}) -> ");
+// double S = Math.Sqrt((xb - xa) * (xb - xa) + (yb - ya) * (yb - ya) + (zb - za) * (zb - za));
+// Console.WriteLine(Math.Round(S, 2));
+
+
+
+// Задача 23
+// Решая задачу, я считаю, что N - натуральное число
+
+Console.Write("Введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+Console.Write(num + " -> ");
+
+for (int i = 1; i < num + 1; i++)
+{
+    Console.Write(i * i * i + " ");
+}
