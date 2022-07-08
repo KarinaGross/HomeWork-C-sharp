@@ -35,18 +35,38 @@
 9012 -> 12
 */
 
-Console.Write("Введите число: ");
-int num = Convert.ToInt32(Console.ReadLine());
-Console.Write(num + " -> ");
+// Console.Write("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.Write(num + " -> ");
 
-int SumOfFigure (int number)
+// int SumOfFigure (int number)
+// {
+//     int sum = 0;
+//     while (number > 0)
+//     {
+//         sum += number % 10;
+//         number = number / 10;
+//     }
+//     return sum;
+// }
+// Console.WriteLine(SumOfFigure(num));
+
+
+
+// Задача 29
+/* 
+Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+6, 1, 33 -> [6, 1, 33]
+*/
+
+int[] array = new int[8];
+
+Console.Write("[");
+for (int i = 0; i < 8; i++)
 {
-    int sum = 0;
-    while (number > 0)
-    {
-        sum += number % 10;
-        number = number / 10;
-    }
-    return sum;
+   array[i] = new Random().Next(1, 101);
+   if (i == 7) Console.Write(array[i]);
+   else Console.Write(array[i] + ", ");
 }
-Console.WriteLine(SumOfFigure(num));
+Console.WriteLine("]");
