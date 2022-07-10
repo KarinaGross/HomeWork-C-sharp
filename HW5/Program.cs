@@ -39,6 +39,12 @@
 // Console.WriteLine($"-> {AmountAnEvenNumber(myArray)}");
 
 
+
+
+
+
+
+
 /* Задача 36: 
 Задайте одномерный массив, заполненный случайными числами. 
 Найдите сумму элементов, стоящих на нечётных позициях.
@@ -46,9 +52,55 @@
 [-4, -6, 89, 6] -> 0
 */
 
-int[] CreateRandomArray (int size, int min, int max)
+// int[] CreateRandomArray (int size, int min, int max)
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(min, max + 1);
+//     }
+//     return array;
+// }
+
+// void ShowArray (int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int SumOddPositionNumber (int[] array)
+// {
+//     int result = 0;
+//     for (int i = 1; i < array.Length; i+=2)
+//     {
+//         result += array[i];
+//     }
+//     return result;
+// }
+
+// int[] myArray = CreateRandomArray(10, -100, 100);
+// ShowArray(myArray);
+// Console.WriteLine($"-> {SumOddPositionNumber(myArray)}");
+
+
+
+
+
+
+
+/*  Задача 38: 
+Задайте массив вещественных чисел. 
+Найдите разницу между максимальным и минимальным элементов массива.
+
+[3 7 22 2 78] -> 76
+*/
+
+double[] CreateRandomArray (int size, int min, int max)
 {
-    int[] array = new int[size];
+    double[] array = new double[size];
     for (int i = 0; i < size; i++)
     {
         array[i] = new Random().Next(min, max + 1);
@@ -56,7 +108,7 @@ int[] CreateRandomArray (int size, int min, int max)
     return array;
 }
 
-void ShowArray (int[] array)
+void ShowArray (double[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
@@ -65,16 +117,18 @@ void ShowArray (int[] array)
     Console.WriteLine();
 }
 
-int SumOddPositionNumber (int[] array)
+double DifMaxAndMin (double[] array)
 {
-    int result = 0;
-    for (int i = 1; i < array.Length; i+=2)
+    double numMin = array[0];
+    double numMax = array[0];
+    for (int i = 0; i < array.Length; i++)
     {
-        result += array[i];
+        if (array[i] < numMin) numMin = array[i];
+        if (array[i] > numMax) numMax = array[i];
     }
-    return result;
+    return numMax - numMin;
 }
 
-int[] myArray = CreateRandomArray(10, -100, 100);
+double[] myArray = CreateRandomArray(10, 0, 1000);
 ShowArray(myArray);
-Console.WriteLine($"-> {SumOddPositionNumber(myArray)}");
+Console.WriteLine($"-> {DifMaxAndMin(myArray)}");
