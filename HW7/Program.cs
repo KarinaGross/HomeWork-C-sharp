@@ -172,7 +172,7 @@ void ArithmeticMeanColumn (int[,] array)
         {
             result += array[i, j];
         }
-        Console.Write($"{result}, ");
+        Console.Write($"{result / array.GetLength(0)}, ");
         result = 0;
     }
 }
