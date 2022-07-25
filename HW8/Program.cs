@@ -1,77 +1,4 @@
-﻿// Задача 54
-// Задайте двумерный массив. 
-// Напишите программу, которая упорядочит по убыванию элементы 
-// каждой строки двумерного массива.
-// Например, задан массив:
-// 1 4 7 2
-// 5 9 2 3
-// 8 4 2 4
-// В итоге получается вот такой массив:
-// 1 2 4 7
-// 2 3 5 9
-// 2 4 4 8
-
-// int[,] GetArray (int m, int n, int minValue, int maxValue)
-// {
-//     int[,] result = new int[m, n];
-//     for (int i = 0; i < m; i++)
-//     {
-//         for (int j = 0; j < n; j++)
-//         {
-//             result[i, j] = new Random().Next(minValue, maxValue + 1);
-//         }
-//     }
-//     return result;
-// }
-
-// int[,] ArrayOrdered (int[,] array)
-// {
-//     for (int i = 0; i < array.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < array.GetLength(1) - 1; j++)
-//         {
-//             int min = array[i, j];
-//             if (array[i, j + 1] < min) 
-//             {
-//                 int temporary = min;
-//                 min = array[i, j + 1];
-//                 array[i, j + 1] = temporary; // не сортирует 
-//             }
-//         }
-//     }
-//     return array;
-// }
-
-// void PrintArray(int[,] inArray)
-// {
-//     for (int i = 0; i < inArray.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < inArray.GetLength(1); j++)
-//         {
-//             Console.Write($"{inArray[i, j]}\t");
-//         }
-//         Console.WriteLine();
-//     }
-// }
-
-// Console.Write("Введите количество строк массива: ");
-// int rows = Convert.ToInt32(Console.ReadLine());
-
-// Console.Write("Введите количество столбцов массива: ");
-// int columns = Convert.ToInt32(Console.ReadLine());
-
-// int[,] myArray = GetArray(rows, columns, 0, 10);
-// PrintArray(myArray);
-
-// Console.WriteLine();
-// int[,] newArray = ArrayOrdered(myArray);
-// PrintArray(newArray);
-
-
-
-
-
-// Задача 56: Задайте прямоугольный двумерный массив. 
+﻿// Задача 56: Задайте прямоугольный двумерный массив. 
 // Напишите программу, которая будет находить строку с наименьшей суммой элементов.
 // Например, задан массив:
 // 1 4 7 2
@@ -238,9 +165,6 @@
 // 45(1,0,0) 53(1,0,1)
 
 
-// задача решена, но вывод в консоле с примером не сходится. Проверить!
-
-
 // int[,,] GetArray (int m, int n, int p)
 // {
 //     int[,,] result = new int[m, n, p];
@@ -250,7 +174,7 @@
 //         {
 //             for (int k = 0; k < p; k++)
 //             {
-//                 result[i, j, k] = new Random().Next(10, 100); // посмотреть как можно создать массив неповторяющихся чисел
+//                 result[i, j, k] = new Random().Next(10, 100); 
 //             }
             
 //         }
@@ -273,7 +197,7 @@
 //     }
 // }
 
-// Console.Write("Введите значение первого измерения трехмерного массива: "); //подкорректировать команду
+// Console.Write("Введите значение первого измерения трехмерного массива: "); 
 // int x = Convert.ToInt32(Console.ReadLine());
 
 // Console.Write("Введите значение второго измерения трехмерного массива: ");
@@ -293,15 +217,3 @@
 
 
 
-
-// Задача 62. Заполните спирально массив 4 на 4.
-
-// Например, на выходе получается вот такой массив:
-
-// 1 2 3 4
-
-// 12 13 14 5
-
-// 11 16 15 6
-
-// 10 9 8 7
