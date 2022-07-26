@@ -3,33 +3,33 @@
 // M = 1; N = 5. -> ""1, 2, 3, 4, 5""
 // M = 4; N = 8. -> ""4, 6, 7, 8""
 
-int[] GetArrayNumbers (int minValue, int maxValue)
-{
-    int[] result = new int[maxValue - minValue + 1];
-    result[0] = minValue;
-    for (int i = 1; i < result.Length; i++)
-    {
-        result[i] = result[i-1] + 1;
-    }
-    return result;
-}
+// int[] GetArrayNumbers (int minValue, int maxValue)
+// {
+//     int[] result = new int[maxValue - minValue + 1];
+//     result[0] = minValue;
+//     for (int i = 1; i < result.Length; i++)
+//     {
+//         result[i] = result[i-1] + 1;
+//     }
+//     return result;
+// }
 
-void PrintArray(int[] inArray)
-{
-    for (int i = 0; i < inArray.Length; i++)
-        {
-            Console.Write($"{inArray[i]} ");
-        }
-}
+// void PrintArray(int[] inArray)
+// {
+//     for (int i = 0; i < inArray.Length; i++)
+//         {
+//             Console.Write($"{inArray[i]} ");
+//         }
+// }
 
-Console.Write("Введите минимальное значение: ");
-int M = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите минимальное значение: ");
+// int M = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Введите максимально значение: ");
-int N = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите максимально значение: ");
+// int N = Convert.ToInt32(Console.ReadLine());
 
-int[] myArray = GetArrayNumbers(M, N);
-PrintArray(myArray);
+// int[] myArray = GetArrayNumbers(M, N);
+// PrintArray(myArray);
 
 
 
@@ -41,6 +41,24 @@ PrintArray(myArray);
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
 
+int SumNumbers (int minValue, int maxValue)
+{
+    int sum = 0;
+    for (int i = minValue; i < (maxValue + 1); i++)
+    {
+        sum += i;
+    }
+    return sum;
+}
+
+
+Console.Write("Введите минимальное значение: ");
+int M = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введите максимально значение: ");
+int N = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine(SumNumbers(M, N));
 
 
 
